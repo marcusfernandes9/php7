@@ -1,5 +1,5 @@
 <?php
-class Produto {
+class Produto implements OrcavelInterface {
     private $descricao;
     private $estoque;
     private $preco;
@@ -10,6 +10,10 @@ class Produto {
         $this->descricao = $descricao;
         $this->estoque = $estoque;
         $this->preco = $preco;
+    }
+
+    public function getPreco() {
+      return $this->preco;
     }
 
     public function getDescricao() {
